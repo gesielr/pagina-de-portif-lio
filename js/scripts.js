@@ -1,3 +1,8 @@
+if (typeof browser === 'undefined') {
+  var browser = window.browser || window.chrome;
+}
+
+
 document.addEventListener("DOMContentLoaded", () => {
   const accordionHeaders = document.querySelectorAll(".accordion-header");
 

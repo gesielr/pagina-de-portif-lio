@@ -456,3 +456,106 @@ footer {
   font-size: 12px;
 }
 
+/* RESPONSIVIDADE */
+
+/* Para telas menores que 768px (tablets e celulares) */
+@media (max-width: 768px) {
+  .background {
+    width: 90%; /* Faz o card ocupar quase toda a largura */
+    margin: 20px auto; /* Ajusta margens */
+    padding: 20px; /* Reduz o padding */
+  }
+
+  .profile-img {
+    width: 80px; /* Reduz o tamanho da imagem */
+    height: 80px;
+  }
+
+  h1 {
+    font-size: 20px; /* Reduz o tamanho do título */
+    text-align: center; /* Centraliza o texto */
+  }
+
+  .subtitle {
+    font-size: 16px; /* Ajusta o subtítulo */
+    position: static; /* Remove o posicionamento absoluto */
+    margin-top: 10px;
+  }
+
+  .contact-info {
+    font-size: 12px; /* Reduz o tamanho do texto */
+    text-align: center; /* Centraliza os textos de contato */
+    margin-bottom: 20px;
+  }
+
+  .accordion-header {
+    font-size: 14px; /* Reduz o tamanho do texto */
+    padding: 10px; /* Ajusta o padding */
+  }
+
+  .accordion-content {
+    flex-direction: column; /* Coloca os blocos em coluna */
+    padding: 10px; /* Adiciona padding interno */
+  }
+
+  .accordion-content > div {
+    max-width: 100%; /* Cada bloco ocupa toda a largura */
+    margin-bottom: 10px; /* Espaçamento entre blocos */
+  }
+
+  .portifolio h2 img {
+    width: 16px; /* Reduz o tamanho do ícone */
+    height: 16px;
+  }
+
+  .portifolio h2 {
+    font-size: 14px; /* Reduz o tamanho do texto */
+  }
+
+  .portifolio p {
+    font-size: 10px; /* Reduz o tamanho do parágrafo */
+  }
+}
+
+/* Para telas menores que 480px (celulares) */
+@media (max-width: 480px) {
+  .background {
+    padding: 10px; /* Reduz o padding */
+  }
+
+  .profile-img {
+    width: 60px; /* Reduz ainda mais a imagem */
+    height: 60px;
+  }
+
+  h1 {
+    font-size: 18px; /* Ajusta o tamanho do título */
+  }
+
+  .subtitle {
+    font-size: 14px; /* Ajusta o tamanho do subtítulo */
+  }
+
+  .contact-info {
+    font-size: 10px; /* Ajusta o texto */
+  }
+
+  .accordion-header {
+    font-size: 12px; /* Ajusta o tamanho do texto */
+    padding: 8px; /* Ajusta o padding */
+  }
+
+  .accordion-content {
+    padding: 5px; /* Reduz o padding interno */
+  }
+
+  .portifolio h2 {
+    font-size: 12px; /* Ajusta o tamanho do texto */
+  }
+
+  .portifolio p {
+    font-size: 9px; /* Ajusta o texto do parágrafo */
+  }
+}
+
+
