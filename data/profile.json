@@ -1,0 +1,89 @@
+{
+    "name": "Carlos Gesiel Rebelo",
+    "photo": "assets/fotoperfil.jpg",
+    "job": "Junior Developer",
+    "location": "Santa Catarina - BR",
+    "phone": "48 99999-9999",
+    "email": "ex@mail.com",
+    "skills": {
+      "hardSkills": [
+        {
+          "name": "React",
+          "logo": "https://raw.githubusercontent.com/digitalinnovationone/js-developer-portfolio/main/data/imgs/react.png"
+        },
+        {
+          "name": "Python",
+          "logo": "https://raw.githubusercontent.com/digitalinnovationone/js-developer-portfolio/main/data/imgs/python.png"
+        },
+        {
+          "name": "Java",
+          "logo": "https://raw.githubusercontent.com/digitalinnovationone/js-developer-portfolio/main/data/imgs/java.png"
+        },
+        {
+          "name": ".NET Core",
+          "logo": "https://raw.githubusercontent.com/digitalinnovationone/js-developer-portfolio/main/data/imgs/dotnet.png"
+        }
+      ],
+      "softSkills": [
+        "Comunicação",
+        "Organização",
+        "Trabalho em equipe",
+        "Comprometimento com resultados"
+      ]
+    },
+    "languages": [
+      "Português",
+      "Inglês",
+      "Espanhol"
+    ],
+    "education": [
+      "Pós Graduação em Gestão Financeira",
+      "Graduação em Contabilidade",
+      "Membro do CRC-SC",
+      "Estudante de Tecnologia na DIO"
+    ],
+    "portfolio": [
+      {
+        "name": "Wiki GitHub",
+        "url": "https://github.com/gesielr/wiki-github.git",
+        "github": true
+      },
+      {
+        "name": "GitFind",
+        "url": "https://github.com/gesielr/gitfind.git",
+        "github": true
+      },
+      {
+        "name": "Pokedes - Descrição",
+        "url": "https://github.com/gesielr/Pokedes---Descri-o.git",
+        "github": true
+      }
+    ],
+    "professionalExperience": [
+      {
+        "name": "Administrador de Empresas",
+        "company": "Figueredo & Filhos",
+        "period": "Período não especificado",
+        "description": "Atuação como administrador de empresas na Figueredo & Filhos."
+      },
+      {
+        "name": "Contador",
+        "company": "CRC-SC",
+        "period": "Período não especificado",
+        "description": "Atuação como contador no CRC-SC."
+      },
+      {
+        "name": "Sócio",
+        "company": "Cadtrack Software",
+        "period": "Período não especificado",
+        "description": "Atuação como sócio na empresa Cadtrack Software."
+      },
+      {
+        "name": "Estudante de Tecnologia",
+        "company": "DIO",
+        "period": "Período atual",
+        "description": "Estudo de tecnologias modernas na DIO."
+      }
+    ]
+  }
+  
