@@ -1,0 +1,458 @@
+*:focus {
+  outline: none; /* Remove contornos de todos os elementos focados */
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 90%;
+}
+
+html, body {
+  margin: 0; /* Remove margens padrão */
+  padding: 0;
+  width: 100%;
+  min-height: 100vh; /* Garante altura mínima de toda a tela */
+  background: linear-gradient(135deg, #ff00ff, #0000ff); /* Gradiente */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: 'Arial', sans-serif;
+  display: flex; /* Flexbox para centralização */
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: flex-start; /* Alinha o conteúdo no topo */
+}
+
+
+
+.background {
+  width: 600px;
+  background: rgba(0, 0, 0, 0.993); /* Fundo translúcido */
+  border-radius: 24px; /* Borda arredondada */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Sombra */
+  backdrop-filter: blur(10px); /* Efeito de desfoque */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  margin: 80px 0; /* Margem superior e inferior */
+  box-sizing: border-box; /* Inclui padding e borda no tamanho total */
+}
+
+.accordion-content {
+  transition: all 0.3s ease; /* Transição suave */
+}
+
+
+
+.profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%; /* Arredondamento para ser circular */
+  object-fit: cover; /* Mantém a proporção da imagem */
+  border: 2px solid #fff;
+  margin-bottom: 20px;
+  position: absolute;
+}
+
+
+
+.profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%; /* Arredondamento para ser circular */
+  object-fit: cover; /* Mantém a proporção da imagem */
+  border: 2px solid #fff;
+  margin-bottom: 20px;
+  position: absolute;
+}
+
+h1 {
+  font-size: 24px;
+  color: #fff;
+  text-align: right;
+}
+
+h1 span {
+  font-weight: bold;
+}
+
+.subtitle {
+  font-size: 18px;
+  color: #d3d3d3;
+  position: absolute;
+  top: 175px;
+}
+
+.contact-info {
+  list-style: none;
+  text-align: -webkit-right;
+  color: #fff;
+  font-size: 14px;
+  margin-bottom: 40px;
+}
+
+.contact-info li {
+  margin: 5px 0;
+}
+
+.accordion {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.accordion-item {
+  margin-bottom: 10px;
+  width: 100%;
+  overflow: hidden; /* Garante que nada transborde da div */
+  border-radius: 10px; /* Bordas arredondadas para o item completo */
+}
+
+.accordion-header {
+  width: 100%;
+  height: 50px;
+  background-color: #4c3f7c; /* Cor roxa escura */
+  color: #fff;
+  padding: 12px 20px;
+  text-align: left;
+  border: none;
+  outline: none;
+  border-radius: 10px; /* Bordas arredondadas */
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  outline: none; /* Remove o contorno quando o botão é focado */
+  border: none; /* Remove qualquer borda */
+}
+
+.accordion-header:focus,.accordion-header:active {
+  outline: none; /* Remove o contorno */
+  border: none; /* Garante que não há borda */
+  box-shadow: none; /* Remove qualquer sombra */
+}
+
+
+.accordion-header:hover {
+  background-color: #7265a6; /* Alteracao de cor ao passar o mouse */
+}
+
+.accordion-content {
+  display: flex; /* Alinha os dois blocos em linha */
+  flex-wrap: wrap; /* Permite ajuste responsivo */
+  justify-content: space-between; /* Espaco entre os blocos */
+  align-items: flex-start; /* Alinha os itens no topo */
+  max-height: 0; /* Oculta o conteudo inicialmente */
+  overflow: hidden; /* Esconde conteudo que ultrapassa a altura */
+  padding: 0; /* Sem padding inicial */
+  background-color: #4c3f7c; /* Fundo igual ao do botao */
+  color: #fff;
+  transition: max-height 0.3s ease, padding 0.3s ease; /* Transicoes suaves */
+  width: 100%;
+  outline: none; /* Remove o contorno pontilhado */
+  border: none; /* Remove qualquer borda */
+  
+  margin-top: -8px;
+ }
+
+.accordion-item.active .accordion-content {
+  max-height: 400px; /* Altura suficiente para o conteudo */
+}
+
+.accordion-content > div {
+  flex: 1; /* Divide igualmente o espaco entre os dois blocos */
+  margin: 0 10px; /* Espacamento entre os blocos */
+  max-width: calc(50% - 20px); /* Garante que cada bloco ocupe metade do espaco */
+  outline: none; /* Remove o contorno quando o botão é focado */
+  border: none; /* Remove qualquer borda */
+
+}
+
+.accordion-content h2.h2skills1 {
+  font-size: 12px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-left: 5px;
+}
+
+.accordion-content h2.h2skills2 {
+  font-size: 12px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+
+
+
+.skills-list li,
+.soft-skills li {
+
+  list-style: none; /* Remove os marcadores padrão */
+}
+
+.skills-list1, .skills-list2, .skills-list3, .skills-list4 {
+  font-size: 12px; 
+  position: relative;
+}
+
+.skills-list2{
+  top: -14px;
+  left: 67px;
+}
+
+.skills-list4 {
+  top: -14px;
+  left: 67px;
+}
+
+.soft-skills1, .soft-skills2, .soft-skills3, .soft-skills4{
+  font-size: 12px; 
+  position: relative;
+}
+
+.soft-skills1{
+  right: 20px;
+}
+
+.soft-skills2 {
+  top: -14px;
+  left: 100px;
+}
+
+.soft-skills3 {
+  right: 10px;
+}
+
+.soft-skills4 {
+  top: -28px;
+  left: 80px;
+  text-align: justify;
+}
+
+/* seção de idiomas --------------------*/
+
+.accordion-content .idiomas {
+  max-height: 400px;
+  max-width: 100%; /* Faz o conteúdo ocupar a largura completa */
+  position: relative;
+
+  flex-wrap: wrap; /* Permite ajuste responsivo */
+  padding: 0; /* Sem padding inicial */
+  background-color: #4c3f7c; /* Fundo igual ao do botao */
+  color: #fff;
+  transition: max-height 0.3s ease, padding 0.3s ease; /* Transicoes suaves */
+  outline: none; /* Remove o contorno pontilhado */
+  border: none; /* Remove qualquer borda */
+  border-radius: 0 0 10px 10px;   
+  margin-top: 8px;
+
+}
+
+.accordion-content .idiomas ul {
+  list-style: none; /* Remove os marcadores padrão */
+  padding: 0; /* Remove o padding da lista */
+  margin: 10px; /* Remove a margem da lista */
+}
+
+.accordion-content .idiomas ul li {
+  margin-bottom: 8px; /* Espaçamento entre os itens da lista */
+  font-size: 12px; /* Ajusta o tamanho da fonte */
+  color: #fff; /* Cor do texto */
+  
+}
+
+
+.skills-idiomas li {
+  display: inline; /* Torna os itens em linha */
+  margin-right: 10px; /* Espaçamento entre os itens */
+ 
+}
+
+
+button.accordion-header,
+button.accordion-header:focus,
+button.accordion-header:active {
+  outline: none; /* Remove o contorno pontilhado */
+  border: none; /* Remove qualquer borda */
+  box-shadow: none; /* Remove sombras que podem parecer contornos */
+}
+
+
+button.accordion-header {
+  border-radius: 10px; /* Faz com que o botao e o conteudo pareçam unidos */
+  background-color: #4c3f7c; /* Cor uniforme */
+  color: white;
+  outline: none; /* Remove o contorno quando o botão é focado */
+  display: flex; /* Ativa o flexbox */
+}
+
+button.accordion-header:hover {
+  background-color: #7265a6; /* Alteracao de cor ao passar o mouse */
+}
+
+button.accordion-header.active {
+  background-color: #4c3f7c; /* Permite manter a cor unificada */
+}
+
+@media (max-width: 768px) {
+  .accordion-content {
+    flex-direction: column; /* Alinha blocos verticalmente em telas menores */
+  }
+  .accordion-content > div {
+    margin: 10px 0; /* Espacamento entre blocos na vertical */
+    max-width: 100%; /* Garante que ocupe a largura total */
+  }
+}
+
+
+/* Seção educação */
+
+.accordion-content .educação {
+  max-width: 100%; /* Ocupa toda a largura */
+  position: relative;
+  padding: 10px; /* Espaçamento interno */
+  background-color: #4c3f7c; /* Cor de fundo */
+  color: #fff;
+  border: none;
+  border-radius: 0 0 10px 10px; /* Bordas arredondadas inferiores */
+  margin-top: 8px;
+  transition: max-height 0.3s ease, padding 0.3s ease; /* Transição suave */
+}
+
+.accordion-content .educação ul {
+  list-style: none; /* Remove os marcadores da lista */
+  margin: 0;
+  padding: 0;
+}
+
+.accordion-content .educação li {
+  margin-bottom: 8px; /* Espaçamento entre itens */
+  font-size: 12px; /* Tamanho da fonte */
+}
+
+
+
+/* Seção Portfólio */
+.accordion-content .portifolio {
+  max-height: 400px;
+  max-width: 100%; /* Faz o conteúdo ocupar a largura completa */
+  position: relative;
+  flex-wrap: wrap; /* Permite ajuste responsivo */
+  padding: 0; /* Sem padding inicial */
+  background-color: #4c3f7c; /* Fundo igual ao do botao */
+  color: #fff;
+  transition: max-height 0.3s ease, padding 0.3s ease; /* Transicoes suaves */
+  outline: none; /* Remove o contorno pontilhado */
+  border: none; /* Remove qualquer borda */
+  border-radius: 0 0 10px 10px;   
+  margin-top: 8px;
+  box-shadow: none; /* Remove qualquer sombra */
+  top: -10px;
+  box-shadow: none !important; /* Remove qualquer sombra */
+  overflow: hidden; /* Garante que nada transborde da div */
+}
+
+/* Novo estilo exclusivo para h2 com a classe .github1 dentro de .portifolio */
+.portifolio h2.github1 {
+  display: flex; /* Alinha ícone e título horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  font-size: 12px; /* Tamanho do título */
+  font-weight: bold; /* Deixa o texto em negrito */
+  margin-top: 10px; /* Remove margens padrão */
+  color: #fff; /* Cor do texto */
+  margin-bottom: -5px;
+}
+
+.portifolio h2.github2 {
+  display: flex; /* Alinha ícone e título horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  font-size: 12px; /* Tamanho do título */
+  font-weight: bold; /* Deixa o texto em negrito */
+  margin: 0; /* Remove margens padrão */
+  color: #fff; /* Cor do texto */
+  margin-top: 5px;
+  margin-bottom: -5px;
+}
+
+.portifolio h2.github3 {
+  display: flex; /* Alinha ícone e título horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  font-size: 12px; /* Tamanho do título */
+  font-weight: bold; /* Deixa o texto em negrito */
+  margin: 0; /* Remove margens padrão */
+  color: #fff; /* Cor do texto */
+  margin-bottom: -5px;
+  margin-top: 5px;
+}
+
+
+
+ .portifolio h2 img {
+  width: 20px; /* Ajusta tamanho do ícone */
+  height: 20px;
+  margin-right: 10px; /* Espaçamento entre ícone e texto */
+  outline: none; /* Remove o contorno */
+  border: none; /* Garante que não há borda */
+  box-shadow: none; /* Remove qualquer sombra */
+}
+
+.accordion-content .portifolio p {
+  font-size: 10px; /* Tamanho do texto */
+  margin: 5px 0 0 50px; /* Alinha à direita do ícone e título */
+  color: #d3d3d3; /* Cor mais clara para o texto */
+  outline: none; /* Remove o contorno */
+  border: none; /* Garante que não há borda */
+  box-shadow: none; /* Remove qualquer sombra */
+  top: -18px;
+  position: relative;
+}
+
+.accordion-content .portifolio a {
+  color: #f3ff06; /* Cor do link */
+  text-decoration: none; /* Remove sublinhado */
+  display: inline-block; /* Mantém espaçamento consistente */
+  top: 17px;
+  position: relative;
+  right: 15px;
+}
+
+.accordion-content .portifolio a:hover {
+  text-decoration: underline; /* Sublinha ao passar o mouse */
+  outline: none; /* Remove o contorno */
+}
+
+
+
+/* Seção experiencia profissional */
+.accordion-content .experienciaprofissional {
+  max-width: 100%; /* Ocupa toda a largura */
+  position: relative;
+  padding: 10px; /* Espaçamento interno */
+  background-color: #4c3f7c; /* Cor de fundo */
+  color: #fff;
+  border: none;
+  border-radius: 0 0 10px 10px; /* Bordas arredondadas inferiores */
+  margin-top: 8px;
+  transition: max-height 0.3s ease, padding 0.3s ease; /* Transição suave */
+}
+
+
+.accordion-content .experienciaprofissional ul {
+  list-style: none; /* Remove os marcadores da lista */
+  margin: 0;
+  padding: 0;
+}
+
+.accordion-content .experienciaprofissional li {
+  margin-bottom: 8px; /* Espaçamento entre itens */
+  font-size: 12px; /* Tamanho da fonte */
+}
+
+footer {
+  margin-top: auto; /* Empurra para baixo */
+  text-align: center;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 12px;
+}
+
