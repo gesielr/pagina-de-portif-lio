@@ -68,6 +68,15 @@ html, body {
   position: absolute;
 }
 
+.contact-info p {
+  margin-bottom: 10px; /* Espaço inferior entre os parágrafos */
+}
+
+.contact-info p:last-child {
+  margin-bottom: 0; /* Remove o espaço do último parágrafo */
+}
+
+
 h1 {
   font-size: 24px;
   color: #fff;
@@ -82,7 +91,7 @@ h1 span {
   font-size: 18px;
   color: #d3d3d3;
   position: absolute;
-  top: 175px;
+  top: 140px;
 }
 
 .contact-info {
@@ -488,7 +497,7 @@ footer {
   .subtitle{ 
     text-align: center; /* Centraliza o texto */
     font-size: 18px; /* Ajusta o tamanho da fonte */
-    margin-top: -55px; /* Espaço entre a imagem e o texto */
+    margin-top: -15px; /* Espaço entre a imagem e o texto */
     margin-bottom: 30px; /* Espaço entre o título e o subtítulo */
   }
 
