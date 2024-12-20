@@ -468,9 +468,28 @@ footer {
 /* Corrige alinhamento para itens do accordion em telas menores */
 
 @media (max-width: 768px) {
+
+  .accordion-content .educação ul.skills-educação li {
+    margin-left: 15px; /* Margem esquerda consistente */
+    text-indent: -8px; /* Remove o espaço adicional da primeira linha */
+    padding-left: 1px; /* Garante o alinhamento consistente de todas as linhas */
+    line-height: 1.5; /* Espaçamento entre linhas */
+    word-wrap: break-word; /* Quebra palavras longas corretamente */
+    display: block; /* Trata cada item como um bloco */
+  }
+
+  .accordion-content .experienciaprofissional ul.profissional li {
+    margin-left: 15px; /* Margem esquerda consistente */
+    text-indent: -9px; /* Remove o deslocamento da primeira linha */
+    padding-left: 1px; /* Garante alinhamento consistente para todas as linhas */
+    line-height: 1.5; /* Espaçamento confortável entre linhas */
+    word-wrap: break-word; /* Quebra palavras longas corretamente */
+    display: block; /* Trata cada item como um bloco */
+  }
+
   .profile-img {
-    width: 100px; /* Reduz o tamanho da imagem */
-    height: 100px;
+    width: 120px; /* Reduz o tamanho da imagem */
+    height: 120px;
     border-radius: 50%; /* Garante bordas arredondadas */
     margin: 0 auto; /* Centraliza a imagem */
     display: block; /* Certifica que seja um bloco */
@@ -492,19 +511,22 @@ footer {
     font-size: 18px; /* Ajusta o tamanho da fonte */
     margin-top: 70px; /* Espaço entre a imagem e o texto */
     margin-bottom: 30px; /* Espaço entre o título e o subtítulo */
+    width: 100%; /* Garante que o texto ocupe toda a largura da div */
   }
 
   .subtitle{ 
     text-align: center; /* Centraliza o texto */
     font-size: 18px; /* Ajusta o tamanho da fonte */
-    margin-top: -15px; /* Espaço entre a imagem e o texto */
+    margin-top: 0px; /* Espaço entre a imagem e o texto */
     margin-bottom: 30px; /* Espaço entre o título e o subtítulo */
+    width: 100%; /* Garante que o texto ocupe toda a largura da div */
   }
 
   .contact-info {
     text-align: center; /* Centraliza as informações */
     font-size: 14px; /* Ajusta o tamanho do texto */
     margin-top: 10px; /* Espaço acima do bloco de informações */
+    width: 100%; /* Garante que o texto ocupe toda a largura da div */
   }
 
   .background {
@@ -529,7 +551,7 @@ footer {
   }
 
   .accordion-content > div {
-    margin-bottom: 8px; /* Espaçamento reduzido entre blocos */
+    left: 8px; /* Espaçamento reduzido entre blocos */
     max-width: 100%; /* Ocupa toda a largura */
   }
 
