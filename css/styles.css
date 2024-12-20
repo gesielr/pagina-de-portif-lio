@@ -8,10 +8,11 @@
   padding: 0;
   box-sizing: border-box;
   width: 90%;
+  position: relative;
 }
 
 html, body {
-  margin: 0; /* Remove margens padrão */
+  margin: 0 auto; /* Centraliza e adiciona espaçamento */
   padding: 0;
   width: 100%;
   min-height: 100vh; /* Garante altura mínima de toda a tela */
@@ -28,7 +29,9 @@ html, body {
 
 
 .background {
-  width: 600px;
+  width: 100%; /* Adapta ao tamanho da tela */
+  max-width: 600px; /* Limita a largura máxima */
+  margin: 20px auto; /* Centraliza o card e mantém margens fixas */
   background: rgba(0, 0, 0, 0.993); /* Fundo translúcido */
   border-radius: 24px; /* Borda arredondada */
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Sombra */
@@ -37,12 +40,8 @@ html, body {
   flex-direction: column;
   align-items: center;
   padding: 40px;
-  margin: 80px 0; /* Margem superior e inferior */
   box-sizing: border-box; /* Inclui padding e borda no tamanho total */
-}
-
-.accordion-content {
-  transition: all 0.3s ease; /* Transição suave */
+  transition: none; /* Remove mudanças animadas de altura */
 }
 
 
@@ -125,6 +124,7 @@ h1 span {
   transition: background-color 0.3s ease;
   outline: none; /* Remove o contorno quando o botão é focado */
   border: none; /* Remove qualquer borda */
+  list-style: none; /* Remove qualquer marcador de lista */
 }
 
 .accordion-header:focus,.accordion-header:active {
@@ -138,27 +138,37 @@ h1 span {
   background-color: #7265a6; /* Alteracao de cor ao passar o mouse */
 }
 
+
 .accordion-content {
-  display: flex; /* Alinha os dois blocos em linha */
+  display: none; /* Inicialmente escondido */
   flex-wrap: wrap; /* Permite ajuste responsivo */
-  justify-content: space-between; /* Espaco entre os blocos */
+  justify-content: space-between; /* Espaço entre os blocos */
   align-items: flex-start; /* Alinha os itens no topo */
-  max-height: 0; /* Oculta o conteudo inicialmente */
-  overflow: hidden; /* Esconde conteudo que ultrapassa a altura */
+  max-height: 0; /* Altura inicial zero para animação */
+  overflow: hidden; /* Esconde conteúdo que ultrapassa a altura */
   padding: 0; /* Sem padding inicial */
-  background-color: #4c3f7c; /* Fundo igual ao do botao */
+  background-color: #4c3f7c; /* Fundo igual ao do botão */
   color: #fff;
-  transition: max-height 0.3s ease, padding 0.3s ease; /* Transicoes suaves */
+  transition: max-height 0.3s ease, padding 0.3s ease; /* Transições suaves */
   width: 100%;
   outline: none; /* Remove o contorno pontilhado */
   border: none; /* Remove qualquer borda */
-  
-  margin-top: -8px;
- }
+  margin-top: -8px; /* Ajusta a margem superior */
+}
+
+.accordion-header::before,
+.accordion-header::after {
+  content: none; /* Remove qualquer conteúdo adicional */
+}
+
 
 .accordion-item.active .accordion-content {
-  max-height: 400px; /* Altura suficiente para o conteudo */
+  display: flex; /* Mostra o conteúdo ao expandir */
+  max-height: 400px; /* Define a altura máxima */
+  padding: 10px; /* Adiciona espaçamento interno */
 }
+
+ 
 
 .accordion-content > div {
   flex: 1; /* Divide igualmente o espaco entre os dois blocos */
@@ -293,16 +303,6 @@ button.accordion-header:hover {
 
 button.accordion-header.active {
   background-color: #4c3f7c; /* Permite manter a cor unificada */
-}
-
-@media (max-width: 768px) {
-  .accordion-content {
-    flex-direction: column; /* Alinha blocos verticalmente em telas menores */
-  }
-  .accordion-content > div {
-    margin: 10px 0; /* Espacamento entre blocos na vertical */
-    max-width: 100%; /* Garante que ocupe a largura total */
-  }
 }
 
 
@@ -456,3 +456,81 @@ footer {
   font-size: 12px;
 }
 
+/* Corrige alinhamento para itens do accordion em telas menores */
+
+@media (max-width: 768px) {
+  .profile-img {
+    width: 100px; /* Reduz o tamanho da imagem */
+    height: 100px;
+    border-radius: 50%; /* Garante bordas arredondadas */
+    margin: 0 auto; /* Centraliza a imagem */
+    display: block; /* Certifica que seja um bloco */
+    position: relative; /* Remove comportamento absoluto */
+    top: 10px; /* Ajusta o espaço superior */
+  }
+
+  .contact-info p {
+    margin-bottom: 10px; /* Espaço inferior entre os parágrafos */
+  }
+  
+  .contact-info p:last-child {
+    margin-bottom: 0; /* Remove o espaço do último parágrafo */
+  }
+  
+
+  h1  {
+    text-align: center; /* Centraliza o texto */
+    font-size: 18px; /* Ajusta o tamanho da fonte */
+    margin-top: 70px; /* Espaço entre a imagem e o texto */
+    margin-bottom: 30px; /* Espaço entre o título e o subtítulo */
+  }
+
+  .subtitle{ 
+    text-align: center; /* Centraliza o texto */
+    font-size: 18px; /* Ajusta o tamanho da fonte */
+    margin-top: -55px; /* Espaço entre a imagem e o texto */
+    margin-bottom: 30px; /* Espaço entre o título e o subtítulo */
+  }
+
+  .contact-info {
+    text-align: center; /* Centraliza as informações */
+    font-size: 14px; /* Ajusta o tamanho do texto */
+    margin-top: 10px; /* Espaço acima do bloco de informações */
+  }
+
+  .background {
+    margin: 20px 15px; /* Espaço lateral e superior/inferior */
+    max-width: 100%; /* Adapta à largura da tela */
+    padding: 20px; /* Reduz o padding interno */
+    box-sizing: border-box; /* Inclui padding no cálculo da largura */
+  }
+
+  .accordion {
+    margin-top: 20px; /* Espaçamento entre o profile-card e o accordion */
+  }
+}
+
+
+
+/* Corrige largura e posicionamento do accordion */
+@media (max-width: 480px) {
+  .accordion-content {
+    padding: 8px; /* Ajusta padding para telas menores */
+    flex-direction: column; /* Mantém os itens em coluna */
+  }
+
+  .accordion-content > div {
+    margin-bottom: 8px; /* Espaçamento reduzido entre blocos */
+    max-width: 100%; /* Ocupa toda a largura */
+  }
+
+  .accordion-header {
+    font-size: 12px; /* Reduz o tamanho do texto do botão */
+    width: calc(100% + 60px) !important; /* Força o botão a ser mais comprido */
+    margin-left: -15px !important; /* Move para fora da borda esquerda */
+    margin-right: -15px !important; /* Move para fora da borda direita */
+    padding: 12px 25px !important; /* Garante espaçamento interno maior */
+    box-sizing: border-box; /* Inclui o padding na largura total */
+    border-radius: 12px; /* Mantém bordas arredondadas */
+  }
+}
