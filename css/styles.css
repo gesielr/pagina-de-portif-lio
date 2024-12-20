@@ -12,18 +12,15 @@
 }
 
 html, body {
-  margin: 0 auto; /* Centraliza e adiciona espaçamento */
+  margin: 0 auto;
   padding: 0;
   width: 100%;
-  min-height: 100vh; /* Garante altura mínima de toda a tela */
-  background: linear-gradient(135deg, #ff00ff, #0000ff); /* Gradiente */
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ff00ff, #0000ff);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   font-family: 'Arial', sans-serif;
-  display: flex; /* Flexbox para centralização */
-  justify-content: center; /* Centraliza horizontalmente */
-  align-items: flex-start; /* Alinha o conteúdo no topo */
 }
 
 
@@ -459,11 +456,21 @@ button.accordion-header.active {
 }
 
 footer {
-  margin-top: auto; /* Empurra para baixo */
-  text-align: center;
-  color: rgba(255, 255, 255, 0.6);
-  font-size: 12px;
+  position: relative; /* O footer será posicionado dentro do fluxo do documento */
+  padding: 10px 20px; /* Espaçamento interno para melhor visualização */
+  background-color: rgba(0, 0, 0, 0.8); /* Fundo do footer */
+  text-align: center; /* Centraliza o conteúdo do footer */
+  display: flex; /* Ativa o flexbox */
+  justify-content: space-between; /* Alinha o conteúdo nos lados opostos */
+  align-items: center; /* Centraliza verticalmente os itens no footer */
 }
+
+footer .selo-direito {
+  width: 50px; /* Largura do selo */
+  height: auto; /* Mantém a proporção da imagem */
+  margin-left: auto; /* Garante que o selo fique alinhado à direita */
+}
+
 
 /* Corrige alinhamento para itens do accordion em telas menores */
 
@@ -530,15 +537,26 @@ footer {
   }
 
   .background {
-    margin: 20px 15px; /* Espaço lateral e superior/inferior */
-    max-width: 100%; /* Adapta à largura da tela */
-    padding: 20px; /* Reduz o padding interno */
+    margin: 20px auto; /* Centraliza horizontalmente e ajusta margem superior/inferior */
+    padding: 20px; /* Mantém o padding interno */
     box-sizing: border-box; /* Inclui padding no cálculo da largura */
+    max-width: calc(100% - 30px); /* Garante margens laterais consistentes */
+   
   }
-
   .accordion {
     margin-top: 20px; /* Espaçamento entre o profile-card e o accordion */
   }
+
+  footer {
+    padding: 10px 15px; /* Garante espaçamento interno consistente */
+    justify-content: space-between; /* Mantém o selo no lado direito */
+    display: flex; /* Ativa o flexbox no footer */
+  }
+
+  footer .selo-direito {
+    margin-left: auto; /* Garante que o selo fique na extrema direita */
+  }
+
 }
 
 
